@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = Index.IndexTitle;
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        <localize>Welcome</localize>
+    </h1>
+    <p>
+        <localize html="true">Learn</localize>
+    </p>
+    
+    <form method="get" asp-page="Index">
+        <select class="form-select form-select-lg mb-3"
+                asp-for="Culture"
+                asp-items="Model.Cultures">
+        </select>
+        <button localize class="btn btn-primary" type="submit">
+            <localize>Submit</localize>
+        </button>
+    </form>
+    
+</div>
